@@ -21,7 +21,7 @@ Kazma & Balta
 
 ## Ürün Özellikleri
 
-- Level bittiğinde dava fazla oyun içeriği olacak ve çarpan artacak.
+- Level bittiğinde daha fazla oyun içeriği olacak ve çarpan artacak.
 - Pixel/voxel tabanlı modelleme ile karakterler ve dünya tasarlanacak.
 - Reklam entegrasyonu ile oyun çarpanı hızlandırma olacak.
 - Oyun 3 levelden oluşacak.
