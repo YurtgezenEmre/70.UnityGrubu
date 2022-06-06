@@ -74,7 +74,7 @@ Yoğunluktan dolayı toplantılar ve hedefler ertelendi.
 Yapılacaklar partlara bölünmüştür.
 
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak bir dosyada derlenip paylaşılmaktadır:
-![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_93.png)
+![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_94.png)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_93.png) 
