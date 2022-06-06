@@ -81,7 +81,8 @@ Yapılacaklar partlara bölünmüştür.
 ![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_93.png) 
 
 - **Ürün Durumu**:
-![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_93.png)
+![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_95.png)
+![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_96.png)
 
 - **Sprint Review**: 
 Oyun ana hatları ile bittiğinden dolayı eksik kalan kaydetme ve "Bestscore" tablosu üzerinde çalışmaya karar verdik. Proje üzerinde aktif çalışan 2 kişinin de yoğun olmasından dolayı plannanların üstüne çıkılmak istense de çıkılamamıştır. Oyunun ana mekaniklerinde bir problem gözlenmemiştir.
