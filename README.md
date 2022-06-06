@@ -14,11 +14,11 @@ Unity70
 
 ## Ürün İsmi
 
-Kazma & Balta
+Time Waster
 
 ## Ürün Açıklaması
 
-- 2D Maden toplama ve odun kırma oyun döngüsünde bir idle oyun.
+- 2D score kasılan, vakit öldürmek için oynanan bir idle oyun.
 
 ## Ürün Özellikleri
 
