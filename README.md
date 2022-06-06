@@ -53,6 +53,7 @@ https://miro.com/app/board/uXjVO5ZYXpY=/?share_link_id=907257406557
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak bir dosyada derlenip paylaşılmaktadır:
 
 - **Sprint board update**: Sprint board screenshotları: 
+- 
 ![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_32.png) 
 
 - **Sprint Review**: 
