@@ -54,7 +54,7 @@ https://miro.com/app/board/uXjVO5ZYXpY=/?share_link_id=907257406557
 
 - **Sprint board update**: Sprint board screenshotları: 
 - 
-![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_32.png) 
+![Backlog 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshot_05.png) 
 
 - **Sprint Review**: 
 Ana mekaniğin scriptlerinin yazılması önceliklerindirilmiştir. Yapılacaklar detaylandırılmıştır.
