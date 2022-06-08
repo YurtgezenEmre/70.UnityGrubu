@@ -1,303 +1,348 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    //Clicker
-    public Text scoreText;
-    public float currentScore;
-    public float hitPower;
-    public float scoreIncreasedPerSecond;
+    //Tıklama
+    public Text skorYazı;
+    public float guncelSkor;
+    public static float vurusGucu;
+    public float skorSaniyeBasına;
     public float x;
 
-    //Shop
-    public int shop1prize;
-    public Text shop1text;
+    //Market
+    public int market1Fiyat;
+    public Text market1Yazı;
 
-    public int shop2prize;
-    public Text shop2text;
+    public int market2Fiyat;
+    public Text market2Yazı;
 
-    //Amount
-    public Text amount1Text;
-    public int amount1;
-    public float amount1Profit;
+    //Miktar
+    public Text miktar1Yazı;
+    public int miktar1;
+    public float miktar1Kar;
 
-    public Text amount2Text;
-    public int amount2;
-    public float amount2Profit;
+    public Text miktar2Yazı;
+    public int miktar2;
+    public float miktar2Kar;
 
-    //Upgrade
-    public int upgradePrize;
-    public Text upgradeText;
+    //Geliştirme
+    public int gelistirmeFiyati;
+    public Text gelistirmeYazi;
 
-    public int allUpgradePrize;
-    public Text allUpgradeText;
+    public int tumGelistirmeFiyati;
+    public Text tumGelistirmeYazi;
 
-    //Achievement
-    public bool achievementScore;
-    public bool achievementShop;
+    //Başarım
+    public bool basarimSkor;
+    public bool basarimMarket;
 
-    public Image image1;
-    public Image image2;
+    public Image foto1;
+    public Image foto2;
 
-    //Level System
-    public int level;
+    //Seviye Sistemi
+    public int seviye;
     public int exp;
-    public int expToNextLevel;
-    public Text levelText;
+    public int expSonrakiSeviye;
+    public Text seviyeYazi;
 
-    //Highest Score
-    public int bestScore;
-    public Text bestScoreText;
+    //Yüksek Skor
+    public int enYuksekSkor;
+    public Text enYuksekSkorYazi;
 
-    //Buttons
+    //Butonlar
     public Sprite sp1, sp2, sp3, sp4;
-    public Image clickerButton;
+    public Image tiklamaButonu;
 
     public Text tx1, tx2, tx3, tx4;
 
-    public int changeCost = 50;
-    public int currentButton = 1;
+    public int degisiklikFiyati1 = 10;
+    public int degisiklikFiyati2 = 100;
+    public int degisiklikFiyati3 = 200;
+    public int degisiklikFiyati4 = 350;
+    public int guncelTus = 1;
+
+    //Rastgele Etkinlik
+    public bool etkinlikZamani = true;
+    public GameObject altinTus;
+
+    //Vuruş
+    public GameObject artiObje;
+    public Text artiYazi;
 
     void Start()
     {
-        //Clicker
-        currentScore = 0;
-        hitPower = 1;
-        scoreIncreasedPerSecond = 1;
+        //Tıklama
+        guncelSkor = 0;
+        vurusGucu = 1;
+        skorSaniyeBasına = 1;
         x = 0f;
 
-        //We must set all default variables before load
-        shop1prize = 25;
-        shop2prize = 125;
-        amount1 = 0;
-        amount1Profit = 1;
-        amount2 = 0;
-        amount2Profit = 5;
+        //Temel Değerler
+        market1Fiyat = 25;
+        market2Fiyat = 125;
+        miktar1 = 0;
+        miktar1Kar = 1;
+        miktar2 = 0;
+        miktar2Kar = 5;
 
-        //Reset Line
-        PlayerPrefs.DeleteAll();
+        tumGelistirmeFiyati = 500;
 
-        //Load
-        currentScore = PlayerPrefs.GetInt("currentScore", 0);
-        hitPower = PlayerPrefs.GetInt("hitPower", 1);
-        x = PlayerPrefs.GetInt("x", 0);
-
-        shop1prize = PlayerPrefs.GetInt("shop1prize", 25);
-        shop2prize = PlayerPrefs.GetInt("shop2prize", 125);
-        amount1 = PlayerPrefs.GetInt("amount1", 0);
-        amount1Profit = PlayerPrefs.GetInt("amount1Profit", 0);
-        amount2 = PlayerPrefs.GetInt("amount2", 0);
-        amount2Profit = PlayerPrefs.GetInt("amount2Profit", 0);
-        upgradePrize = PlayerPrefs.GetInt("upgradePrize", 50);
-
-        allUpgradePrize = 500;
-
-        bestScore = PlayerPrefs.GetInt("bestScore", 0);
-
-
+        enYuksekSkor = PlayerPrefs.GetInt("enYuksekSkor", 0);
     }
 
-    // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
-        //Clicker
-        scoreText.text = (int)currentScore + "$";
-        scoreIncreasedPerSecond = x * Time.deltaTime;
-        currentScore = currentScore + scoreIncreasedPerSecond;
+        //Tıklama
+        skorYazı.text = (int)guncelSkor + "₺";
+        skorSaniyeBasına = x * Time.deltaTime;
+        guncelSkor = guncelSkor + skorSaniyeBasına;
 
-        //Shop
-        shop1text.text = "Tier 1: " + shop1prize + " $";
-        shop2text.text = "Tier 2: " + shop2prize + " $";
+        //Market
+        market1Yazı.text = "Aşama 1: " + market1Fiyat + " ₺";
+        market2Yazı.text = "Aşama 2: " + market2Fiyat + " ₺";
 
-        //Amount
-        amount1Text.text = "Tier 1: " + amount1 + " arts $: " + amount1Profit + "/s";
-        amount2Text.text = "Tier 2: " + amount2 + " arts $: " + amount2Profit + "/s";
+        //Miktar
+        miktar1Yazı.text = "Aşama 1: " + miktar1 + ". Level " + miktar1Kar + "₺/sn";
+        miktar2Yazı.text = "Aşama 2: " + miktar2 + ". Level " + miktar2Kar + "₺/sn";
 
-        //Upgrade
-        upgradeText.text = "Cost: " + upgradePrize + " $";
+        //Geliştirme
+        gelistirmeYazi.text = "Geliştirme: " + gelistirmeFiyati + " ₺";
 
-        //Save
-        PlayerPrefs.SetInt("currentScore", (int)currentScore);
-        PlayerPrefs.SetInt("hitPower", (int)hitPower);
-        PlayerPrefs.SetInt("x", (int)x);
+        tumGelistirmeYazi.text = "Fiyat: " + tumGelistirmeFiyati + " ₺";
 
-        PlayerPrefs.SetInt("shop1prize", (int)shop1prize);
-        PlayerPrefs.SetInt("shop2prize", (int)shop2prize);
-        PlayerPrefs.SetInt("amount1", (int)amount1);
-        PlayerPrefs.SetInt("amount1Profit", (int)amount1Profit);
-        PlayerPrefs.SetInt("amount2", (int)amount1);
-        PlayerPrefs.SetInt("amount2Profit", (int)amount2Profit);
-        PlayerPrefs.SetInt("upgradePrize", (int)upgradePrize);
+        PlayerPrefs.SetInt("enYuksekSkor", enYuksekSkor);
 
-        allUpgradeText.text = "Cost: " + allUpgradePrize + " $";
-
-        PlayerPrefs.SetInt("bestScore", bestScore);
-
-        //Achievement
-        if (currentScore >= 50)
+        //Başarımlar
+        if (guncelSkor >= 100)
         {
-            achievementScore = true;
+            basarimSkor = true;
         }
 
-        if (amount1 >= 2)
+        if (miktar2 >= 5)
         {
-            achievementShop = true;
+            basarimMarket = true;
         }
 
-        if (achievementScore == true)
+        if (basarimSkor == true)
         {
-            image1.color = new Color(1f, 1f, 1f, 1f);
+            foto1.color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
-            image1.color = new Color(0.2f, 0.2f, 0.2f, 0.2f);
+            foto1.color = new Color(0.2f, 0.2f, 0.2f, 0.2f);
         }
 
-        if (achievementShop == true)
+        if (basarimMarket == true)
         {
-            image2.color = new Color(1f, 1f, 1f, 1f);
+            foto2.color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
-            image2.color = new Color(0.2f, 0.2f, 0.2f, 0.2f);
+            foto2.color = new Color(0.2f, 0.2f, 0.2f, 0.2f);
         }
 
-        //Level
-        if (exp >= expToNextLevel)
+        //Seviye
+        if (exp >= expSonrakiSeviye)
         {
-            level++;
+            seviye++;
             exp = 0;
-            expToNextLevel *= 2;
+            expSonrakiSeviye *= 2;
         }
 
-        levelText.text = level + " level";
+        seviyeYazi.text = seviye + " Seviye";
 
-        //Highest Score
-        if (currentScore > bestScore)
+        //Yüksek Skor
+        if (guncelSkor > enYuksekSkor)
         {
-            bestScore = (int)currentScore;
+            enYuksekSkor = (int)guncelSkor;
         }
 
-        bestScoreText.text = bestScore + " Best Score";
+        enYuksekSkorYazi.text = enYuksekSkor + " ₺ Yüksek Skor";
 
-        //Buttons
-        tx1.text = "Set for: " + changeCost;
-        tx2.text = "Set for: " + changeCost;
-        tx3.text = "Set for: " + changeCost;
-        tx4.text = "Set for: " + changeCost;
+        //Butonlar
+        tx1.text = "Ücreti: " + degisiklikFiyati1;
+        tx2.text = "Ücreti: " + degisiklikFiyati2;
+        tx3.text = "Ücreti: " + degisiklikFiyati3;
+        tx4.text = "Ücreti: " + degisiklikFiyati4;
 
-        if (currentButton == 1)
+        if (guncelTus == 1)
         {
-            clickerButton.sprite = sp1;
+            tiklamaButonu.sprite = sp1;
         }
 
-        if (currentButton == 2)
+        if (guncelTus == 2)
         {
-            clickerButton.sprite = sp2;
+            tiklamaButonu.sprite = sp2;
         }
 
-        if (currentButton == 3)
+        if (guncelTus == 3)
         {
-            clickerButton.sprite = sp3;
+            tiklamaButonu.sprite = sp3;
         }
 
-        if (currentButton == 4)
+        if (guncelTus == 4)
         {
-            clickerButton.sprite = sp4;
+            tiklamaButonu.sprite = sp4;
         }
 
+        //Rastgele Olay
+        if (etkinlikZamani == false && altinTus.active == true)
+        {
+            altinTus.SetActive(false);
+            StartCoroutine(OlayiBekle());
+        }
+
+        if (etkinlikZamani == true && altinTus.active == false)
+        {
+            altinTus.SetActive(true);
+            altinTus.transform.position = new Vector3(Random.Range(420, 700), Random.Range(200, 400), 0);
+        }
+
+        //Vuruş
+        artiYazi.text = "+ " + vurusGucu;
     }
 
-    //Hit
-    public void Hit()
+    //Vuruş
+    public void vurus()
     {
-        currentScore += hitPower;
+        guncelSkor += vurusGucu;
 
         //Exp
         exp++;
+
+        artiObje.SetActive(false);
+
+        artiObje.transform.position = new Vector3(Random.Range(465, 645 + 1), Random.Range(205, 405 + 1), 0);
+
+        artiObje.SetActive(true);
+
+        StopAllCoroutines();
+        StartCoroutine(Ucus());
+
+        Instantiate(artiObje, transform.position, transform.rotation);
     }
 
-    //Shop
-    public void Shop1()
+    //Market
+    public void Market1()
     {
-        if (currentScore >= shop1prize)
+        if (guncelSkor >= market1Fiyat)
         {
-            currentScore -= shop1prize;
-            amount1 += 1;
-            amount1Profit += 1;
+            guncelSkor -= market1Fiyat;
+            miktar1 += 1;
+            miktar1Kar += 1;
             x += 1;
-            shop1prize += 25;
+            market1Fiyat += 25;
         }
     }
 
-    public void Shop2()
+    public void Market2()
     {
-        if (currentScore >= shop2prize)
+        if (guncelSkor >= market2Fiyat)
         {
-            currentScore -= shop2prize;
-            amount2 += 1;
-            amount2Profit += 5;
+            guncelSkor -= market2Fiyat;
+            miktar2 += 1;
+            miktar2Kar += 5;
             x += 5;
-            shop2prize += 125;
+            market2Fiyat += 125;
         }
     }
 
-    //Upgrade
-    public void Upgrade()
+    //Geliştirme
+    public void Gelistirme()
     {
-        if (currentScore >= upgradePrize)
+        if (guncelSkor >= gelistirmeFiyati)
         {
-            currentScore -= upgradePrize;
-            hitPower *= 2;
-            upgradePrize *= 3;
+            guncelSkor -= gelistirmeFiyati;
+            vurusGucu *= 2;
+            gelistirmeFiyati *= 3;
         }
     }
 
-    public void AllProfitsUpgrade()
+    public void FullGelistirme()
     {
-        if (currentScore >= allUpgradePrize)
+        if (guncelSkor >= tumGelistirmeFiyati)
         {
-            currentScore -= allUpgradePrize;
+            guncelSkor -= tumGelistirmeFiyati;
             x *= 2;
-            allUpgradePrize *= 3;
-            amount1Profit *= 2;
-            amount2Profit *= 2;
+            tumGelistirmeFiyati *= 3;
+            miktar1Kar *= 2;
+            miktar2Kar *= 2;
         }
     }
 
-    public void Button1()
+    public void Buton1()
     {
-        if (currentScore >= changeCost)
+        if (guncelSkor >= degisiklikFiyati1)
         {
-            currentScore -= changeCost;
-            currentButton = 1;
+            guncelSkor -= degisiklikFiyati1;
+            guncelTus = 1;
         }
     }
-    public void Button2()
+    public void Buton2()
     {
-        if (currentScore >= changeCost)
+        if (guncelSkor >= degisiklikFiyati2)
         {
-            currentScore -= changeCost;
-            currentButton = 2;
+            guncelSkor -= degisiklikFiyati2;
+            guncelTus = 2;
         }
     }
-    public void Button3()
+    public void Buton3()
     {
-        if (currentScore >= changeCost)
+        if (guncelSkor >= degisiklikFiyati3)
         {
-            currentScore -= changeCost;
-            currentButton = 3;
+            guncelSkor -= degisiklikFiyati3;
+            guncelTus = 3;
         }
     }
-    public void Button4()
+    public void Buton4()
     {
-        if (currentScore >= changeCost)
+        if (guncelSkor >= degisiklikFiyati4)
         {
-            currentScore -= changeCost;
-            currentButton = 4;
+            guncelSkor -= degisiklikFiyati4;
+            guncelTus = 4;
         }
     }
+
+    //Rastgele Olay
+    public void OdulAl()
+    {
+        guncelSkor = guncelSkor + vurusGucu * 50;
+        etkinlikZamani = false;
+        StartCoroutine(OlayiBekle());
+    }
+
+    IEnumerator OlayiBekle()
+    {
+        yield return new WaitForSeconds(2f);
+
+        int x = 0;
+        x = Random.Range(1, 3);
+
+        if (x == 2)
+        {
+            etkinlikZamani = true;
+        }
+
+        else
+        {
+            altinTus.SetActive(true);
+        }
+    }
+
+    IEnumerator Ucus()
+    {
+        for (int i = 0; i <= 19; i++)
+        {
+            yield return new WaitForSeconds(0.01f);
+
+            artiObje.transform.position = new Vector3(artiObje.transform.position.x, artiObje.transform.position.y + 2, 0);
+        }
+
+        artiObje.SetActive(false);
+    }
+
 }

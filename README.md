@@ -96,4 +96,5 @@ Eklenmesi planlanan bazı içerikler rafa kaldırılmalı.
 
 ---
 
-Kullandığımız tek asset: https://www.kenney.nl/assets/roguelike-caves-dungeons
+- **Kullandığımız Assetler**:
+https://www.kenney.nl/assets/roguelike-caves-dungeons
