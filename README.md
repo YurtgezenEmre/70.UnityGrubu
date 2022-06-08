@@ -101,6 +101,6 @@ Eklenmesi planlanan bazı içerikler rafa kaldırılmalı.
 ---
 
 - **Kullandığımız Assetler**:
-https://www.kenney.nl/assets/impact-sounds
-https://assetstore.unity.com/packages/2d/textures-materials/planets-with-space-background-in-flat-style-95983#description
+- https://www.kenney.nl/assets/impact-sounds
+- https://assetstore.unity.com/packages/2d/textures-materials/planets-with-space-background-in-flat-style-95983#description
 
