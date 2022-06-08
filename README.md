@@ -53,7 +53,7 @@ https://miro.com/app/board/uXjVO5ZYXpY=/?share_link_id=907257406557
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak bir dosyada derlenip paylaşılmaktadır:
 
 - **Sprint board update**: Sprint board screenshotları: 
-- https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_1.png
+- ![Sprint 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_1.png)
 
 - **Sprint Review**: 
 Ana mekaniğin scriptlerinin yazılması önceliklerindirilmiştir. Yapılacaklar detaylandırılmıştır.
@@ -74,16 +74,16 @@ Yoğunluktan dolayı toplantılar ve hedefler ertelendi.
 Yapılacaklar partlara bölünmüştür.
 
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak bir dosyada derlenip paylaşılmaktadır:
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Daily_Scrum.png
+![Daily Scrum](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Daily_Scrum.png)
 
 - **Sprint board update**: Sprint board screenshotları: 
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_3.png
+![Sprint 3](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_3.png)
 
 - **Ürün Durumu**:
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Eski.png
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Yeni.png
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/inGame_SS.png
-https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/inGame_SS_2.png
+![Eski Skin Sistemi](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Eski.png)
+![Yeni Skin Sistemi](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Yeni.png)
+![Oyun İçi Görüntü 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/inGame_SS.png)
+![Oyun İçi Görüntü 2](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/inGame_SS_2.png)
 
 - **Sprint Review**: 
 Oyun ana hatları ile bittiğinden dolayı eksik kalan kaydetme ve "Bestscore" tablosu üzerinde çalışmaya karar verdik. Proje üzerinde aktif çalışan 2 kişinin de yoğun olmasından dolayı plannanların üstüne çıkılmak istense de çıkılamamıştır. Oyunun ana mekaniklerinde bir problem gözlenmemiştir.
