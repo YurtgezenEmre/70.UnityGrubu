@@ -1,4 +1,4 @@
-# 70.UnityGrubu# **Takım İsmi**
+# 70.UnityGrubu - **Takım İsmi**
 
 Unity70
 
@@ -53,7 +53,7 @@ https://miro.com/app/board/uXjVO5ZYXpY=/?share_link_id=907257406557
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak bir dosyada derlenip paylaşılmaktadır:
 
 - **Sprint board update**: Sprint board screenshotları: 
-- ![Sprint 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_1.png)
+![Sprint 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_1.png)
 
 - **Sprint Review**: 
 Ana mekaniğin scriptlerinin yazılması önceliklerindirilmiştir. Yapılacaklar detaylandırılmıştır.
@@ -74,12 +74,15 @@ Yoğunluktan dolayı toplantılar ve hedefler ertelendi.
 Yapılacaklar partlara bölünmüştür.
 
 - **Daily Scrum**: Daily Scrum toplantılarının kullanım kolaylığından dolayı Discord üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak bir dosyada derlenip paylaşılmaktadır:
+
 ![Daily Scrum](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Daily_Scrum.png)
 
 - **Sprint board update**: Sprint board screenshotları: 
+
 ![Sprint 3](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Sprint_3.png)
 
 - **Ürün Durumu**:
+
 ![Eski Skin Sistemi](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Eski.png)
 ![Yeni Skin Sistemi](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/Market_Yeni.png)
 ![Oyun İçi Görüntü 1](https://github.com/YurtgezenEmre/70.UnityGrubu/blob/main/Screenshots/inGame_SS.png)
@@ -98,4 +101,6 @@ Eklenmesi planlanan bazı içerikler rafa kaldırılmalı.
 ---
 
 - **Kullandığımız Assetler**:
-https://www.kenney.nl/assets/roguelike-caves-dungeons
+https://www.kenney.nl/assets/impact-sounds
+https://assetstore.unity.com/packages/2d/textures-materials/planets-with-space-background-in-flat-style-95983#description
+
